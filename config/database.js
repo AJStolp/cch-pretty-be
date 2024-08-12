@@ -6,7 +6,10 @@ module.exports = ({ env }) => {
   const connections = {
     mysql: {
       connection: {
-        connectionString: env("DATABASE_URL"),
+        connectionString: env(
+          "DATABASE_URL",
+          `mysql://strapi:strapi@localhost:3306/strapi`
+        ),
         host: env("DATABASE_HOST", "localhost"),
         port: env.int("DATABASE_PORT", 3306),
         database: env("DATABASE_NAME", "strapi"),
@@ -29,33 +32,15 @@ module.exports = ({ env }) => {
         max: env.int("DATABASE_POOL_MAX", 10),
       },
     },
-    mysql2: {
-      connection: {
-        connectionString: env("DATABASE_URL"),
-        host: env("PGHOST"),
-        port: env.int("PGPORT"),
-        database: env("POSTGRES_DB"),
-        user: env("PGUSER"),
-        password: env("POSTGRES_PASSWORD"),
-        ssl: env.bool("DATABASE_SSL", true) && {
-          rejectUnauthorized: env.bool(
-            "DATABASE_SSL_REJECT_UNAUTHORIZED",
-            false
-          ),
-        },
-        schema: env("DATABASE_SCHEMA", "public"),
-      },
-      pool: {
-        min: env.int("DATABASE_POOL_MIN", 2),
-        max: env.int("DATABASE_POOL_MAX", 10),
-      },
-    },
     postgres: {
       connection: {
-        connectionString: env("DATABASE_URL"),
+        connectionString: env(
+          "DATABASE_URL",
+          `postgres://strapi:strapi@localhost:5432/strapi`
+        ),
         host: env("PGHOST", "localhost"),
         port: env.int("PGPORT", 5432),
-        database: env("DATABASE_CLIENT", "strapi"),
+        database: env("POSTGRES_DB", "strapi"),
         user: env("PGUSER", "strapi"),
         password: env("POSTGRES_PASSWORD", "strapi"),
         ssl: env.bool("DATABASE_SSL", false) && {
