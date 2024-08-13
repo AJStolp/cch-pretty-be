@@ -6,8 +6,8 @@ module.exports = ({ env }) => {
       client: "postgres",
       connection: {
         connectionString: isProduction
-          ? env("DATABASE_URL") // Internal URL for production
-          : env("DATABASE_LOCAL_URL"), // Public URL for local development
+          ? env("DATABASE_URL") // Use internal URL for production
+          : env("DATABASE_PUBLIC_URL"), // Use public URL for local development
         ssl: isProduction &&
           env.bool("DATABASE_SSL", false) && {
             rejectUnauthorized: env.bool(
