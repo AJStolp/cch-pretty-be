@@ -10,7 +10,7 @@ module.exports = ({ env }) => {
       connection: {
         connectionString: isProduction
           ? env("DATABASE_URL") // Internal URL for production
-          : env("DATABASE_PUBLIC_URL", "DATABASE_LOCAL_URL"), // Public URL for local development
+          : env("DATABASE_LOCAL_URL"), // Public URL for local development
         ssl: isProduction &&
           env.bool("DATABASE_SSL", false) && {
             rejectUnauthorized: env.bool(
