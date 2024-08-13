@@ -7,7 +7,7 @@ module.exports = ({ env }) => {
     postgres: {
       connection: {
         connectionString: env(
-          "DATABASE_URL",
+          "DATABASE_PUBLIC_URL",
           `postgres://strapi:strapi@localhost:5432/strapi`
         ),
         host: env("PGHOST", "localhost"),
