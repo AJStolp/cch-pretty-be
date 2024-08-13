@@ -10,7 +10,9 @@ module.exports = ({ env }) => ({
         folder: "cch/ceramic-mugs", // Specify the folder where images should be uploaded
       },
       actionOptions: {
-        upload: {},
+        upload: {
+          folder: "cch/ceramic-mugs",
+        },
         delete: {},
       },
     },
