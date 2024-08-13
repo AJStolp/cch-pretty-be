@@ -1,4 +1,3 @@
-// path: ./config/plugins.js
 const cloudinary = require("cloudinary").v2;
 
 module.exports = ({ env }) => {
@@ -35,6 +34,18 @@ module.exports = ({ env }) => {
               }
             },
           },
+        },
+      },
+    },
+    graphql: {
+      config: {
+        endpoint: "/graphql",
+        shadowCRUD: true, // Automatically generate queries & mutations for your content types
+        playgroundAlways: true, // Enable the GraphQL playground in production
+        depthLimit: 7, // Limit query complexity
+        amountLimit: 100, // Limit the number of records in a response
+        apolloServer: {
+          tracing: true, // Enable tracing of queries
         },
       },
     },
