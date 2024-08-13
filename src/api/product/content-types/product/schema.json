@@ -28,6 +28,9 @@
         "videos",
         "audios"
       ]
+    },
+    "price": {
+      "type": "string"
     }
   }
 }
