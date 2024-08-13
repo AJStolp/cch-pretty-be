@@ -7,11 +7,11 @@ module.exports = ({ env }) => ({
         cloud_name: env("CLOUDINARY_NAME"),
         api_key: env("CLOUDINARY_KEY"),
         api_secret: env("CLOUDINARY_SECRET"),
-        folder: "cch/ceramic-mugs", // Specify the folder where images should be uploaded
+        folder: "cch/ceramic-mugs", // Specify the default folder
       },
       actionOptions: {
         upload: {
-          folder: "cch/ceramic-mugs",
+          folder: "cch/ceramic-mugs", // Ensure uploads go to this folder
         },
         delete: {},
       },
