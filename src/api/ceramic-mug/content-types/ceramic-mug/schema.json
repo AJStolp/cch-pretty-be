@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "ceramic_mugs",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "product",
-    "description": ""
+    "singularName": "ceramic-mug",
+    "pluralName": "ceramic-mugs",
+    "displayName": "ceramic-mug"
   },
   "options": {
     "draftAndPublish": true

@@ -362,6 +362,36 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiCeramicMugCeramicMug extends Schema.CollectionType {
+  collectionName: 'ceramic_mugs';
+  info: {
+    singularName: 'ceramic-mug';
+    pluralName: 'ceramic-mugs';
+    displayName: 'ceramic-mug';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mug: Attribute.Component<'mugs.mug'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ceramic-mug.ceramic-mug',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ceramic-mug.ceramic-mug',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Schema.CollectionType {
   collectionName: 'products';
   info: {
@@ -374,10 +404,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    content: Attribute.Text;
-    media: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    price: Attribute.String;
+    mug: Attribute.Component<'mugs.mug'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -832,6 +859,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::ceramic-mug.ceramic-mug': ApiCeramicMugCeramicMug;
       'api::product.product': ApiProductProduct;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
