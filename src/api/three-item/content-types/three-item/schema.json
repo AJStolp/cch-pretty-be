@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "three_items",
+  "info": {
+    "singularName": "three-item",
+    "pluralName": "three-items",
+    "displayName": "three-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.product-card"
+    }
+  }
+}
