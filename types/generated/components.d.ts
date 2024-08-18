@@ -16,12 +16,13 @@ export interface MugsMug extends Schema.Component {
   collectionName: 'components_mugs_mugs';
   info: {
     displayName: 'mug';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     content: Attribute.Blocks;
-    price: Attribute.String;
     media: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    price: Attribute.Integer;
   };
 }
 
