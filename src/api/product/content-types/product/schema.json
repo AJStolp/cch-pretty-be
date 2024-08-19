@@ -15,7 +15,7 @@
     "mug": {
       "type": "component",
       "repeatable": false,
-      "component": "mugs.mug"
+      "component": "product.mug"
     }
   }
 }

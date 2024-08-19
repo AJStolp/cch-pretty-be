@@ -12,10 +12,10 @@ export interface ProductProductCard extends Schema.Component {
   };
 }
 
-export interface MugsMug extends Schema.Component {
+export interface ProductMug extends Schema.Component {
   collectionName: 'components_mugs_mugs';
   info: {
-    displayName: 'mug';
+    displayName: 'products';
     description: '';
   };
   attributes: {
@@ -30,7 +30,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'product.product-card': ProductProductCard;
-      'mugs.mug': MugsMug;
+      'product.mug': ProductMug;
     }
   }
 }

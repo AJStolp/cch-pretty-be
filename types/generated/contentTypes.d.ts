@@ -829,7 +829,7 @@ export interface ApiCeramicMugCeramicMug extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    mug: Attribute.Component<'mugs.mug'>;
+    mug: Attribute.Component<'product.mug'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -860,7 +860,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    mug: Attribute.Component<'mugs.mug'>;
+    mug: Attribute.Component<'product.mug'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
