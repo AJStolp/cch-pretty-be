@@ -848,6 +848,38 @@ export interface ApiCeramicMugCeramicMug extends Schema.CollectionType {
   };
 }
 
+export interface ApiEnamelCampingMugEnamelCampingMug
+  extends Schema.CollectionType {
+  collectionName: 'enamel_camping_mugs';
+  info: {
+    singularName: 'enamel-camping-mug';
+    pluralName: 'enamel-camping-mugs';
+    displayName: 'enamel-camping-mug';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    product: Attribute.Component<'product.mug'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::enamel-camping-mug.enamel-camping-mug',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::enamel-camping-mug.enamel-camping-mug',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Schema.CollectionType {
   collectionName: 'products';
   info: {
@@ -929,6 +961,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::carousel.carousel': ApiCarouselCarousel;
       'api::ceramic-mug.ceramic-mug': ApiCeramicMugCeramicMug;
+      'api::enamel-camping-mug.enamel-camping-mug': ApiEnamelCampingMugEnamelCampingMug;
       'api::product.product': ApiProductProduct;
       'api::three-item.three-item': ApiThreeItemThreeItem;
     }
