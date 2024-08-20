@@ -14,7 +14,7 @@
   "attributes": {
     "product": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "product.mug"
     }
   }

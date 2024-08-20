@@ -861,7 +861,7 @@ export interface ApiEnamelCampingMugEnamelCampingMug
     draftAndPublish: true;
   };
   attributes: {
-    product: Attribute.Component<'product.mug'>;
+    product: Attribute.Component<'product.mug', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
