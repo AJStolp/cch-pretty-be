@@ -855,12 +855,13 @@ export interface ApiCeramicMugCeramicMug extends Schema.CollectionType {
     singularName: 'ceramic-mug';
     pluralName: 'ceramic-mugs';
     displayName: 'ceramic-mug';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    mug: Attribute.Component<'product.mug'>;
+    product: Attribute.Component<'product.mug', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

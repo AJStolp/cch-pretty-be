@@ -4,16 +4,17 @@
   "info": {
     "singularName": "ceramic-mug",
     "pluralName": "ceramic-mugs",
-    "displayName": "ceramic-mug"
+    "displayName": "ceramic-mug",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "mug": {
+    "product": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "product.mug"
     }
   }
