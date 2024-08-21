@@ -956,7 +956,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    mug: Attribute.Component<'product.mug'>;
+    product: Attribute.Component<'product.mug'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "mug": {
+    "product": {
       "type": "component",
       "repeatable": false,
       "component": "product.mug"
