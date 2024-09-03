@@ -975,6 +975,36 @@ export interface ApiProductProduct extends Schema.CollectionType {
   };
 }
 
+export interface ApiTShirtTShirt extends Schema.CollectionType {
+  collectionName: 't_shirts';
+  info: {
+    singularName: 't-shirt';
+    pluralName: 't-shirts';
+    displayName: 'T-shirt';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    product: Attribute.Component<'product.mug', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::t-shirt.t-shirt',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::t-shirt.t-shirt',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiThreeItemThreeItem extends Schema.CollectionType {
   collectionName: 'three_items';
   info: {
@@ -1029,6 +1059,7 @@ declare module '@strapi/types' {
       'api::contact.contact': ApiContactContact;
       'api::enamel-camping-mug.enamel-camping-mug': ApiEnamelCampingMugEnamelCampingMug;
       'api::product.product': ApiProductProduct;
+      'api::t-shirt.t-shirt': ApiTShirtTShirt;
       'api::three-item.three-item': ApiThreeItemThreeItem;
     }
   }
