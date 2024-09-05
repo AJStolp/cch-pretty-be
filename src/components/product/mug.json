@@ -25,6 +25,9 @@
     },
     "price": {
       "type": "integer"
+    },
+    "handle": {
+      "type": "string"
     }
   }
 }

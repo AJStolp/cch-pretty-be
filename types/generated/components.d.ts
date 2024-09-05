@@ -23,6 +23,7 @@ export interface ProductMug extends Schema.Component {
     content: Attribute.Blocks;
     media: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     price: Attribute.Integer;
+    handle: Attribute.String;
   };
 }
 
