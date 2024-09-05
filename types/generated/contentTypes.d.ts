@@ -1011,6 +1011,7 @@ export interface ApiThreeItemThreeItem extends Schema.CollectionType {
     singularName: 'three-item';
     pluralName: 'three-items';
     displayName: 'three-item';
+    description: '';
   };
   options: {
     draftAndPublish: true;

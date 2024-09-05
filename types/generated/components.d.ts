@@ -4,11 +4,13 @@ export interface ProductProductCard extends Schema.Component {
   collectionName: 'components_product_product_cards';
   info: {
     displayName: 'product-card';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     price: Attribute.Integer;
     media: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    handle: Attribute.String;
   };
 }
 
