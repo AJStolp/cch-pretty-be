@@ -957,7 +957,6 @@ export interface ApiProductProduct extends Schema.CollectionType {
   };
   attributes: {
     product: Attribute.Component<'product.mug'>;
-    handle: Attribute.String & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -15,10 +15,6 @@
       "type": "component",
       "repeatable": false,
       "component": "product.mug"
-    },
-    "handle": {
-      "type": "string",
-      "unique": true
     }
   }
 }
