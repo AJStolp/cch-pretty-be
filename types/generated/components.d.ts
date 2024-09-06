@@ -10,7 +10,6 @@ export interface ProductProductCard extends Schema.Component {
     title: Attribute.String;
     price: Attribute.Integer;
     media: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    handle: Attribute.String;
   };
 }
 
